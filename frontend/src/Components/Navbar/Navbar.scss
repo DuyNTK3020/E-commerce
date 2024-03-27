@@ -1,0 +1,98 @@
+$primary-color: #088178;
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        p {
+            margin: 0;
+            color: #171717;
+            font-size: 38px;
+            font-weight: 600;
+        }
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        li {
+            display: inline-block;
+            position: relative;
+            list-style: none;
+            padding: 10px 20px;
+            color: #626262;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s ease;
+            &:hover,
+            &.active {
+                color: $primary-color;
+                &::after {
+                    width: 30%;
+                }
+            }
+            &::after,
+            &.active::after {
+                content: "";
+                width: 0%;
+                height: 2px;
+                background-color: $primary-color;
+                position: absolute;
+                bottom: 0px;
+                left: 20px;
+                transition: width 0.3s ease;
+                z-index: 100;
+            }
+        }
+    }
+    &__login {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+        button {
+            width: 157px;
+            height: 58px;
+            outline: none;
+            border: 1px solid #7a7a7a;
+            border-radius: 75px;
+            color: #515151;
+            font-size: 20px;
+            font-weight: 500;
+            background-color: #fff;
+            transition: 0.3s ease;
+            cursor: pointer;
+            &:hover {
+                color: #fff;
+                background-color: #088178;
+            }
+            &:active {
+                background-color: #1acfc3;
+            }
+        }
+        &__cart {
+            position: relative;
+            &--count {
+                position: absolute;
+                text-align: center;
+                right: -10px;
+                top: -10px;
+                width: 22px;
+                height: 22px;
+                line-height: 22px;
+                padding: 0;
+                border-radius: 11px;
+                font-size: 14px;
+                color: #fff;
+                background-color: red;
+            }
+        }
+    }
+}
