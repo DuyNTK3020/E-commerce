@@ -6,10 +6,12 @@ $primary-color: #088178;
     align-items: center;
     padding: 20px 80px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
     &__logo {
         display: flex;
         align-items: center;
         gap: 10px;
+
         p {
             margin: 0;
             color: #171717;
@@ -17,28 +19,27 @@ $primary-color: #088178;
             font-weight: 600;
         }
     }
+
     &__menu {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin: 0;
+
         li {
             display: inline-block;
             position: relative;
             list-style: none;
-            padding: 10px 20px;
-            color: #626262;
             font-size: 20px;
             font-weight: 500;
-            cursor: pointer;
-            transition: 0.3s ease;
-            &:hover,
-            &.active {
-                color: $primary-color;
-                &::after {
-                    width: 30%;
-                }
+
+            a {
+                color: #626262;
+                display: inline-block;
+                text-decoration: none;
+                padding: 10px 20px;
             }
+
             &::after,
             &.active::after {
                 content: "";
@@ -51,12 +52,24 @@ $primary-color: #088178;
                 transition: width 0.3s ease;
                 z-index: 100;
             }
+
+            &:hover,
+            &.active {
+                a {
+                    color: $primary-color;
+                }
+                &::after {
+                    width: 30%;
+                }
+            }
         }
     }
+
     &__login {
         display: flex;
         align-items: center;
         gap: 45px;
+
         button {
             width: 157px;
             height: 58px;
@@ -69,21 +82,40 @@ $primary-color: #088178;
             background-color: #fff;
             transition: 0.3s ease;
             cursor: pointer;
+
             &:hover {
                 color: #fff;
                 background-color: #088178;
             }
+
             &:active {
                 background-color: #1acfc3;
             }
         }
+
+        svg {
+            width: 35px;
+            height: 35px;
+            color: #000;
+            transition: 0.3s ease;
+
+            &:hover {
+                color: #088178;
+            }
+
+            &:active {
+                color: #1acfc3;
+            }
+        }
+
         &__cart {
             position: relative;
+
             &--count {
                 position: absolute;
                 text-align: center;
-                right: -10px;
-                top: -10px;
+                right: -15px;
+                top: -15px;
                 width: 22px;
                 height: 22px;
                 line-height: 22px;
@@ -91,7 +123,7 @@ $primary-color: #088178;
                 border-radius: 11px;
                 font-size: 14px;
                 color: #fff;
-                background-color: red;
+                background-color: rgb(247, 76, 76);
             }
         }
     }
