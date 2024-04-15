@@ -1,8 +1,8 @@
 .item {
-    width: 350px;
+    width: 250px;
 
     & p {
-        margin: 6px 0;
+        margin: 10px 0;
     }
     
     &-price {
@@ -26,5 +26,9 @@
     &:hover {
         transform: scale(1.05);
         transition: 0.3s;
+    }
+
+    img {
+        width: 100%;
     }
 }

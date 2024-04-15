@@ -11,7 +11,7 @@ export const Offers = () => {
             <p>ONLY ON BEST SELLERS PRODUCTS</p>
             <button>Check Now</button>
         </div>
-        <div className="offer-right">
+        <div className="offers-right">
             <img src={exclusive_image} alt="" />
         </div>
     </div>

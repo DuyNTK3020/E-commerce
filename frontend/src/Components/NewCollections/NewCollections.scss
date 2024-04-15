@@ -1,4 +1,4 @@
-.popular {
+.new-collections {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,8 +24,9 @@
         }
     }
 
-    &-item {
-        display: flex;
+    .collections {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         margin-top: 50px;
         gap: 30px;
     }
